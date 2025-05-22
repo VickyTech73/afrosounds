@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --white: #f2f2ff;
+    --yellow: #ffd900;
+    --black: #333;
+    --red: #ff6d40e8;
+    --light-dark-line-sep: #4b4b4b44;
+    --default-font: 'Poppins', sans-serif;
+}
+
+*{
+    font-family: var(--default-font);
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+}
+
+.button {
+    text-decoration: none;
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: 300ms;
+    z-index: 1;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.button:hover {
+    border-color: var(--white);
+    color: var(--yellow);
+}
+
+.button:hover::before {
+    width: 100%;
+    background: var(--white);
+    border-radius: 8px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.yellow-text {
+    color: var(--yellow);
+}
+
+.dark-text {
+    color: var(--black);
+}
+
+.white-text {
+    color: var(--white);
+}
+
+.red-text {
+    color: var(--red);
+}
+
+.yellow-text-shadow {
+    text-shadow: 0px 0px 5px var(--yellow);
+}
+
+.dark-text-shadow {
+    text-shadow: 0px 0px 5px var(--black);
+}
+
+.white-text-shadow {
+    text-shadow: 0px 0px 5px var(--white);
+}
+
+.red-text-shadow {
+    text-shadow: 0px 0px 5px var(--red);
+}
+
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.underliner {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: var(--light-dark-line-sep);
+}

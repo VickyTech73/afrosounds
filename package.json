@@ -1,0 +1,14 @@
+{
+  "name": "afrosounds",
+  "version": "1.0.0",
+  "description": "a website as a source of electronic musical materials",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vaydar",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

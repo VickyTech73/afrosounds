@@ -1,0 +1,582 @@
+@import "mini-frames.css";
+
+.body nav {
+    position: fixed;
+    width: 100vw;
+    height: 10%;
+    background: var(--black);
+    display: flex;
+    z-index: 1;
+}
+
+nav .b-menu-cont {
+    display: none;
+}
+
+nav .logo-cont {
+    position: relative;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo-cont a {
+    font-size: 1.7rem;
+    /* color: var(--black); */
+    color: var(--yellow);
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.nav-links-cont {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav-links-cont a {
+    font-size: 1.2rem;
+    /* color: var(--black); */
+    color: var(--white);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-links-cont a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    /* background: var(--black); */
+    background: var(--yellow);
+    bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links-cont a:hover::before {
+    width: 3rem;
+}
+
+.nav-links-cont a:hover {
+    color: var(--white);
+}
+
+.login-cont {
+    position: relative;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-link {
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    /* comment below out if you change the nav-background to --yellow*/
+    border-color: var(--yellow);
+    color: var(--white);
+}
+
+.whole {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: var(--white);
+    background-image: url('../images/african-american-music-producer-listening-recorded-song-home-studio.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(11.1%);
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    /* background: var(--black); */
+    border-top: 1px solid var(--light-dark-line-sep);
+    background-position: center;
+    background-size: cover;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000080;
+    z-index: -1;
+}
+
+.section .div-50-pc {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .intro-sect {
+    background-image: url('../images/skilled-artist-working-with-audio-technician-edit-recorded-songs.jpg');
+}
+
+.sound-packs {
+    background-image: url('../images/african-american-music-producer-listening-recorded-song-home-studio.jpg');
+}
+
+.instrumentals {
+    background-image: url('../images/equipment-empty-musical-recording-room.jpg');
+}
+
+.about-us {
+    background-image: url('../images/young-man-in-studio.jpg');
+}
+
+.contact-us {
+    background-image: url('../images/an-equilixer-in-a-studio.jpg')
+} */
+
+.intro-heading {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-heading .welcome {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+}
+
+.intro-heading .logo {
+    margin-top: -4%;
+    width: 100%;
+    text-align: left;
+    font-size: 5rem;
+}
+
+.intro-text, .text {
+    margin-top: -4%;
+}
+
+.get-started-link {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    z-index: 1;
+    margin-bottom: 50px;
+    color: var(--white);
+    border-color: var(--yellow);
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headphone-1 {
+    width: 200%;
+    object-fit: cover;
+    /* filter: drop-shadow(0px 0px 2px var(--yellow)); */
+}
+
+.floating-person-1 {
+    width: 150%;
+    object-fit: cover;
+    /* filter: drop-shadow(0px 0px 2px var(--yellow)); */
+
+}
+
+.box {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box h1 {
+    position: relative;
+    width: 100%;
+    flex: 2;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box p {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.n-1 {
+    animation: lefter 1s ease-in-out;
+}
+
+.n-2 {
+    animation: righter 1s ease-in-out;
+}
+
+@keyframes lefter {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes righter {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.n-3, .n-5, .n-7, .n-9 {
+    opacity: 0;
+    transform: translate(-50%, 0);
+}
+
+.n-4, .n-6, .n-8, .n-10 {
+    opacity: 0;
+    transform: translate(50%, 0);
+}
+
+.target {
+    transition: 500ms ease-in-out;
+}
+
+.target.visible {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.floating-phone {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: drop-shadow(0px 0px 2px var(--yellow)); */
+    transform: rotate(10deg);
+}
+
+#active-nav-link:before {
+    width: 3rem;
+}
+
+/* -----------------------------
+   General Footer Styles
+------------------------------ */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* -----------------------------
+   Logo and Tagline
+------------------------------ */
+.footer-logo-cont {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-logo-cont img {
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.footer-tagline {
+    font-size: 16px;
+    color: #ccc;
+    margin: 0;
+}
+
+/* -----------------------------
+   Social Media Section
+------------------------------ */
+.media-handles-cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    height: fit-content;
+}
+
+.media-handle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #222;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-handle a {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.media-handle:hover, .media-handle a:active {
+    transform: scale(1.1);
+    filter: brightness(1.4);
+    box-shadow: 0px 0px 10px var(--yellow);
+    outline: none;
+}
+
+.media-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* -----------------------------
+   Copyright
+------------------------------ */
+.footer-copy {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.newsletter-sub-cont {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+.newsletter-sub-cont .input-cont {
+    position: relative;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #00000080;
+}
+
+.input-cont .newsletter-input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #222;
+    border: none;
+    transition: 300ms ease-in-out;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.newsletter-input:focus, .newsletter-input:active {
+    outline: none;
+    box-shadow: 0px 0px 10px var(--yellow);
+}
+
+.newsletter-btn {
+    position: relative;
+    width: 20%;
+    height: 104%;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: var(--yellow);
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.newsletter-btn:hover, .newsletter-btn:active {
+    background-color: #fff;
+    color: var(--yellow);
+    box-shadow: 0px 0px 10px var(--yellow);
+}
+
+@media (width < 768px) {
+    .newsletter-sub-cont .input-cont {
+        width: 100%;
+    }
+}
+
+
+@media (width < 890px) { 
+    .nav-links-cont {
+        display: none;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    nav .logo-cont {
+        width: 50%;
+        display: flex;
+        scale: 0.75;
+    }
+
+    .logo-cont a {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .login-cont {
+        width: 30%;
+    }
+
+    .login-cont a {
+        width: 80%;
+        height: 50%;
+    }
+
+    nav .b-menu-cont {
+        display: flex;
+        position: relative;
+        width: 20%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro-heading .logo {
+        scale: 0.8;
+    }
+
+    .b-menu-cont .b-menu-btn {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background-image: url('../images/icons/b-menu.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .b-menu-cont .b-menu {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        background: var(--white);
+        left: 40px;
+        top: 80px;
+        border-radius: 8px;
+        display: none;
+        animation: slide-in 400ms ease-in-out;
+    }
+
+    @keyframes slide-in {
+        0% {
+            left: -20px;
+            opacity: 0;
+        }
+
+        100% {
+            left: 40px;
+            opacity: 1;
+        }
+    }
+
+    .b-menu a {
+        position: relative;
+        width: 100%;
+        height: 25%;
+        transition: 300ms;
+    }
+
+    .b-menu a:hover, .b-menu a:active {
+        background: var(--yellow);
+    }
+
+    #image {
+        display: none;
+    }
+
+    #text {
+        width: 100%;
+        /* background: var(--black);     will consider this later*/
+    }
+
+    .box .text {
+        text-align: justify;
+    }
+
+    .section {
+        border: none;
+    }
+    
+}
+
