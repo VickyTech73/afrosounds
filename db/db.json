@@ -1,12 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "king@afrosounds.com",
       "password": "password1"
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "queen@afrosounds.com",
       "password": "password2"
     },
@@ -14,6 +14,11 @@
       "id": "c0df",
       "email": "agbozovictor73@gmail.comq",
       "password": "password3"
+    },
+    {
+      "id": "bd8f",
+      "email": "pauladdaeagbozo@gmail.com",
+      "password": "password4"
     }
   ]
 }

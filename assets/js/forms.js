@@ -23,7 +23,12 @@ window.onload = () => {
             }
         } else {
             // login logic
-            alert("Login submitted successfully")
+            if (password.value.length < 8) {
+                alert("Password must be at least 8 characters")
+            }else {
+                login(email.value, password.value)
+                alert("loggin in")
+            }
         }
     })
 
@@ -56,5 +61,26 @@ window.onload = () => {
             alert("Signup failed. Please try again.");
         });
 
+    }
+
+    function login(email, password) {
+        fetch("http://localhost:8000/users", {
+            method:"GET"
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Server error: ${response.status}`);
+            }
+            console.log(response)
+            return response.json();
+        })
+        .then(result => {
+            console.log(result)
+            // maybe redirect or reset form
+        })
+        .catch(error => {
+            console.error("Signup failed:", error);
+            alert("Signup failed. Please try again.");
+        });
     }
 }

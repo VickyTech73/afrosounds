@@ -524,6 +524,12 @@ img {
         background-image: url('../images/icons/b-menu.png');
         background-repeat: no-repeat;
         background-position: center;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+    }
+
+    .b-menu-btn:hover {
+        scale: 1.1;
     }
 
     .b-menu-cont .b-menu {
@@ -559,6 +565,16 @@ img {
 
     .b-menu a:hover, .b-menu a:active {
         background: var(--yellow);
+    }
+
+    .b-menu a:first-child:hover, .b-menu a:first-child:hover {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .b-menu a:last-child:hover, .b-menu a:last-child:hover {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
 
     #image {
